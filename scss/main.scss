@@ -1,0 +1,163 @@
+@import "./imports/_normalize.scss";
+@import "./imports/_skeleton.scss";
+
+@mixin media-query($size: 650px){
+  @media screen and (min-width: $size ){
+    @content;
+  }
+}
+
+*{ box-sizing: border-box }
+
+body{
+  font-family: "Poppins";
+}
+
+img {
+   width: 100%;
+   display: block;
+}
+
+#app-container{
+  @include media-query(){
+    padding-left: 41.666%;
+  }
+}
+
+.fixed-profile{
+  background: url('../images/portfolio-bg.jpeg');
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  color: #fff;
+
+  /* Mobile Styles */
+  padding: 30px 0;
+
+
+  @include media-query(){
+    position: fixed;
+    padding: 0;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 41.67%;
+  }
+}
+
+.fixed-profile img{
+  max-width: 100px;
+  border-radius: 50%;
+  display: block;
+  margin: 10px auto;
+}
+
+.fixed-profile > * {
+  text-align: center;
+  flex-basis: 100%;
+}
+
+.fixed-profile h1{
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.fixed-profile p{
+  color: #aaa;
+  font-weight: 300;
+  margin-top: 0;
+}
+
+header {
+  padding: 20px 0 15px;
+  text-align: center;
+  h2 { margin: 0;}
+}
+
+section{
+  padding: 20px;
+  max-width: 600px;
+  font-size: 1.25em;
+  color: #bbb;
+  margin: 0 auto ;
+  font-weight: 300;
+}
+
+section h4{
+  color: #A5677A;
+}
+
+.portfolio__single {
+  line-height: initial;
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 30px;
+  padding: 5px;
+
+}
+
+.portfolio__single:hover{
+  background: url('../images/grey.png');
+  .portfolio__title {
+    color: #00BCD4;
+  }
+}
+
+.portfolio__title{
+  color: #aaa;
+  font-size: 30px;
+  display: inline-block;
+  align-content: center;
+  vertical-align: middle;
+  width: 100%;
+  font-weight: 400;
+
+  @include media-query(900px){
+    width: 75%;
+  }
+}
+
+.portfolio__date{
+  display: inline-block;
+  align-content: end;
+  vertical-align: middle;
+  width: 100%;
+  color: #E7AAA5;
+  text-align: left;
+
+  @include media-query(900px){
+    width: 24%;
+    text-align: right;
+  }
+}
+
+.blog__single{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
+}
+
+.blog__single-img{
+  width: 95%;
+  margin: 0 auto;
+
+  @include media-query(900px){
+    width: 25%;
+  }
+}
+
+.blog__single-txt{
+  width: 95%;
+  margin: 0 auto;
+
+  h5{font-size: 21px; margin-top: 0; margin-bottom: 5px; color: #333;}
+  p {font-size: 14px; margin-bottom: 0;}
+  @include media-query(900px){
+    width: 70%;
+  }
+}
