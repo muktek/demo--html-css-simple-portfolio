@@ -28,6 +28,29 @@ img {
   }
 }
 
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  a{
+    padding: 10px;
+    background: $theme-purple;
+    display: block;
+    margin: 6px;
+    color: #fff;
+    text-decoration: none;
+  }
+  @include media-query(){
+    left: initial;
+    right: 0;
+    text-align: left;
+  }
+}
+
+
+
 .profile-fixed{
   background: url('../images/portfolio-bg.jpeg');
   background-size: cover;
@@ -72,6 +95,10 @@ img {
   color: #ccc  ;
   font-weight: 300;
   margin-top: 0;
+}
+
+.profile-content{
+  padding-bottom: 4rem;
 }
 
 header {
@@ -152,7 +179,7 @@ section h4{
   color: #333;
 }
 
-.projects__single{
+.project{
   margin-bottom: 4rem;
   width: 100%;
   margin: 0 auto 10px auto;
@@ -163,28 +190,32 @@ section h4{
   align-items: center;
 }
 
-.projects__single--solo{
+.project--solo{
   border-left: 12px $theme-red solid;
   color: $theme-red
 
 
 }
 
-.projects__single--team{
+.project--team{
   border-left: 12px $theme-purple solid;
   color: $theme-purple
 }
 
 
 
-.projects__title{
+.project__title{
   font-size: 18px; margin-top: 0;
 }
 
 
-.projects__type{
+.project__type{
+  border-left: 1px solid #aaa;
+  border-right: 1px solid #aaa;
   font-size: .675em;
-  width: 72px;
+  margin-right: 10px;
+  padding: 0 7px;
+  width: 60px;
   text-align: center;
   color: #aaa;
 }
@@ -193,28 +224,32 @@ section h4{
   font-size: 21px; margin-top: 0; margin-bottom: 5px;
 }
 
-.types{
+.project-types-list{
   text-align: right;
   margin-bottom: 10px;
   font-size: 0;
 }
 
-.types__single{
+.project-type{
   font-size: medium;
   padding: 10px 16px;
   border-bottom: 1px solid #ddd;
   display: inline-block;
+  border-bottom: #aaa 4px solid;
+  color: #aaa;
 }
 
-.types__single--solo{
+.project-type--selected{
+  background: #f0f0f0;
+}
 
-  border-bottom: $theme-red 6px solid;
+.project-type--solo{
+  border-bottom: $theme-red 4px solid;
   color: $theme-red;
-
 }
 
-.types__single--team{
-  border-bottom: $theme-purple 6px solid;
+.project-type--team{
+  border-bottom: $theme-purple 4px solid;
   color: #4F3C5F;
 }
 
@@ -236,4 +271,67 @@ section h4{
   font-size: 80px;
   border: 1px solid #ddd;
   text-align: center;
+}
+
+.job-timeline{
+  padding-left: 25px;
+}
+
+.job{
+  color: #666;
+  border-left: 2px solid #333;
+  position: relative;
+  padding-left: 40px;
+  padding-bottom: 30px;
+}
+
+.job__years{
+  background: #666;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  width: 60px;
+  height: 60px;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  align-content: center;
+  position: absolute;
+  top: 0;
+  left: 0 ;
+  transform: translateX(-50%);
+}
+
+.job__start{
+  width: 100%;
+  font-size: 12px;
+  margin: 0;
+}
+
+.job__end{
+  width: 100%;
+  font-size: 12px;
+  margin: 0;
+}
+.job__title{
+  margin: 3px 0;
+  font-size: 21px;
+}
+
+.job__company{
+  font-size: 18px;
+  color: #aaa;
+}
+
+.job__description{
+  font-size: 14px;
+}
+
+.job__responsibilities{
+  margin-bottom: 0;
+}
+
+.job__responsibilities li{
+  margin-bottom: 3px;
+  font-size: 14px;
 }
