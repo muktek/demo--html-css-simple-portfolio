@@ -101,6 +101,25 @@ nav {
   padding-bottom: 4rem;
 }
 
+.degree{
+  margin-top: 25px;
+}
+
+.degree__institute{
+  font-size: 18px;
+  color: #666;
+  margin: 5px 0;
+}
+.degree__field{
+  font-size: 16px;
+  color: #aaa;
+  margin: 5px 0;
+}
+.degree__dates{
+  font-size: 12px;
+  margin: 5px 0;
+}
+
 header {
   padding: 20px 0 15px;
   text-align: center;
@@ -162,7 +181,7 @@ section h4{
   width: 90%;
 }
 
-.contactinfo__date{
+.contactinfo__icon{
   display: inline-block;
   align-content: end;
   vertical-align: middle;
