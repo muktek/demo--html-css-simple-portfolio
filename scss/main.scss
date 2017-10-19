@@ -51,7 +51,7 @@ nav {
 
 
 
-.profile-fixed{
+.portfolio-fixed{
   background: url('../images/portfolio-bg.jpeg');
   background-size: cover;
   display: flex;
@@ -74,30 +74,30 @@ nav {
   }
 }
 
-.profile-fixed img{
+.portfolio-fixed img{
   max-width: 100px;
   border-radius: 50%;
   display: block;
   margin: 10px auto;
 }
 
-.profile-fixed > * {
+.portfolio-fixed > * {
   text-align: center;
   flex-basis: 100%;
 }
 
-.profile-fixed h1{
+.portfolio-fixed h1{
   font-weight: 500;
   margin-bottom: 8px;
 }
 
-.profile-fixed p{
+.portfolio-fixed p{
   color: #ccc  ;
   font-weight: 300;
   margin-top: 0;
 }
 
-.profile-content{
+.portfolio-content{
   padding-bottom: 4rem;
 }
 
