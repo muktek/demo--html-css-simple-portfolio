@@ -180,62 +180,50 @@
             </div>
             <div class='projects-list'>
               <div class="project project--team">
-                <span class="project__type">Dev</span>
                 <span class="project__title">Skeleton Prototyper</span>
               </div>
 
               <div class="project project--solo">
-                <span class="project__type">Dev</span>
                 <span class="project__title">API Generator</span>
               </div>
 
               <div class="project project--solo">
-                <span class="project__type">Design</span>
                 <span class="project__title">Washaway: Branding + Logos</span>
               </div>
 
               <div class="project project--team">
-                <span class="project__type">Misc</span>
                 <span class="project__title">Hurricane Donations</span>
               </div>
 
               <div class="project project--solo">
-                <span class="project__type">Misc</span>
                 <span class="project__title">Mountain Storage</span>
               </div>
 
               <div class="project project--team">
-                <span class="project__type">Dev</span>
                 <span class="project__title">Farmer Payments</span>
               </div>
 
               <div class="project project--team">
-                <span class="project__type">Design</span>
                 <span class="project__title">Point of Purchase</span>
               </div>
 
               <div class="project project--team">
-                <span class="project__type">Design</span>
                 <span class="project__title">Marcus Events Landing Page</span>
               </div>
 
               <div class="project project--solo">
-                <span class="project__type">Dev</span>
                 <span class="project__title">Move Forward Mobile API</span>
               </div>
 
               <div class="project project--team">
-                <span class="project__type">Design</span>
                 <span class="project__title">EducaDriver Prototype</span>
               </div>
 
               <div class="project project--team">
-                <span class="project__type">Misc</span>
                 <span class="project__title">TinForge Workshops</span>
               </div>
 
               <div class="project project--solo">
-                <span class="project__type">Dev</span>
                 <span class="project__title">Used Parts API</span>
               </div>
             </div>
@@ -283,7 +271,6 @@
           .map((prObj)=>{
             return `
               <div class="project ${prObj.solo ? 'project--solo': 'project--team'}">
-                <span class="project__type">${prObj.role}</span>
                 <span class="project__title">${prObj.projectName}</span>
               </div>
             `
